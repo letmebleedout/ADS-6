@@ -11,22 +11,22 @@ struct SYM {
 
 template<typename T>
 class TPQueue {
-  private:
-    struct Node {
-      T data;
-      Node* next;
-      explicit Node(const T& value) : data(value), next(nullptr) {}
-    };
+ private:
+  struct Node {
+    T data;
+    Node* next;
+    explicit Node(const T& value) : data(value), next(nullptr) {}
+  };
 
-    Node* head;
+  Node* head;
 
-  public:
-    TPQueue() : head(nullptr) {}
-    ~TPQueue();
+ public:
+  TPQueue() : head(nullptr) {}
+  ~TPQueue();
 
-    void push(const T& value);
-    T pop();
-    bool isEmpty() const;
+  void push(const T& value);
+  T pop();
+  bool isEmpty() const;
 };
 
 template<typename T>
